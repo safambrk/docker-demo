@@ -1,5 +1,7 @@
-# docker-demo
+# Docker Demo
 
-# to test the image
+# CMD to build image:
+docker build -t docker-demo:1.0 .
 
-https://hub.docker.com/r/safambrk/docker-demo
+# CMD to run docker compose
+sudo docker-compose -f docker-compose.yaml up -d
