@@ -25,7 +25,11 @@ const app = express()
 const port = 3000
 
 app.get('/', (req, res) => {
-  res.json({ message : "Hello! This is my fisrt Docker Demo! 😎", data: data})
+  res.json({
+    message: "Hello! This is my fisrt Docker Demo! 😎",
+    info: "CI to Docker Hub added! 😎",
+    data: data
+  })
 })
 
 app.listen(port, () => {
