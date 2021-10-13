@@ -1,15 +1,16 @@
 // MySQL 
 const mysql = require("mysql");
 
+let data = null;
+
 const pool = mysql.createPool({
   host: "localhost",
-  port: "3307",
+  port: 3306,
   user: "root",
   password: "root",
   database: "docker-demo"
 });
 
-let data = null;
 
 pool.query('select 1 + 1 ', (err, rows) => {
   if(err) throw err;
@@ -19,6 +20,7 @@ pool.query('select 1 + 1 ', (err, rows) => {
 });
 
 
+
 // Express API
 const express = require('express')
 const app = express()
@@ -26,9 +28,7 @@ const port = 3000
 
 app.get('/', (req, res) => {
   res.json({
-    message: "Hello! This is my fisrt Docker Demo! 😎",
-    info: "CI to Docker Hub added succefully! 😎",
-    myRepo: "https://github.com/safambrk/docker-demo",
+    message: "Hello! This is my fisrt Docker Demo!",
     testData: data
   })
 })
