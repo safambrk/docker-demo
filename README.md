@@ -3,9 +3,10 @@
 
 # Rebuild & Run with Docker Compose
 # Step 1
-$ docker-compose -f docker-compose.yaml up -d
+$ docker-compose -f docker-compose.yaml up --build -d
 # Step 2
 $ node script.js
+
 
 
 
@@ -14,7 +15,6 @@ $ docker build -t IMAGE_NAME:TAG .
 
 # Run The Image
 $ docker run -i -t --name CONTAINER_NAME IMAGE_ID
-
 
 
 
