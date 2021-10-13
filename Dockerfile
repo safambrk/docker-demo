@@ -1,6 +1,6 @@
 FROM node:alpine
 WORKDIR /app 
 ADD package*.json ./
-RUN npm i && apk add bash
+RUN npm i
 ADD . .
 CMD node script.js

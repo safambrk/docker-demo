@@ -2,8 +2,10 @@
 
 
 # Rebuild & Run with Docker Compose
-
-$ docker-compose -f docker-compose.yaml up
+# Step 1
+$ docker-compose -f docker-compose.yaml up -d
+# Step 2
+$ node script.js
 
 
 
@@ -18,7 +20,7 @@ $ docker run -i -t --name CONTAINER_NAME IMAGE_ID
 
 
 # Push to Docker Hub
-# Step1
+# Step 1
 $ docker build -t DOCKER_HUB_USERNAME/IMAGE_NAME:TAG .
 # Step 2
 $ docker login

@@ -4,11 +4,11 @@ const mysql = require("mysql");
 let data = null;
 
 const pool = mysql.createPool({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "root",
-  database: "docker-demo"
+  host: 'localhost',
+  port: '3306',
+  user: 'root',
+  password: '1234',
+  database: 'docker-demo'
 });
 
 
